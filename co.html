@@ -1,0 +1,362 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap menu, scroll detect, show on scrolling page, navbar, menu CSS examples" />
+<meta name="description" content="Auto hide navbar or header on scroll down. Page examples, Bootstrap 5" />  
+
+<title>Demo - Bootstrap 5 navbar hide on scroll down, show on scroll up. Code example</title>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="co.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Vujahday+Script&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/7a97b81a6f.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+  .autohide{
+    position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1030;
+  }
+  .scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+  .scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+  }
+
+</style>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(){
+    
+    el_autohide = document.querySelector('.autohide');
+    
+    // add padding-top to bady (if necessary)
+    navbar_height = document.querySelector('.navbar').offsetHeight;
+    document.body.style.paddingTop = navbar_height + 'px';
+
+    if(el_autohide){
+      
+      var last_scroll_top = 0;
+      window.addEventListener('scroll', function() {
+            let scroll_top = window.scrollY;
+           if(scroll_top < last_scroll_top) {
+                el_autohide.classList.remove('scrolled-down');
+                el_autohide.classList.add('scrolled-up');
+            }
+            else {
+                el_autohide.classList.remove('scrolled-up');
+                el_autohide.classList.add('scrolled-down');
+            }
+            last_scroll_top = scroll_top;
+
+      }); 
+      // window.addEventListener
+
+    }
+    // if
+    
+  }); 
+  // DOMContentLoaded  end
+
+
+</script>
+
+</head>
+<body>
+
+<!-- ============= COMPONENT ============== -->
+<nav class="autohide navbar navbar-expand-lg navbar-light  bg-light">
+ <div class="container-fluid">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h3 class="animate-charcter" style="text-align: left;float: left;">Online Education</h3>
+    </div>
+  </div>
+</div>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item"><a class="nav-link" href="index.html" style="color: purple;"> Home </a></li>
+    <li class="nav-item"><a class="nav-link" href="#about"style="color: purple;"> About </a></li>
+    <li class="nav-item dropdown">
+      <a class="nav-link  dropdown-toggle" href="#" data-bs-toggle="dropdown" style="color: purple;"> Courses  </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+        <li><a class="dropdown-item" href="co.html">Online Courses</a></li>
+        <li><a class="dropdown-item" href="co.html">Youtube Channel </a></li>
+        </ul>
+    </li>
+     <li class="nav-item"><a class="nav-link" href="#contact" style="color: purple;"> Contact </a></li>
+  </ul>
+
+  </div> <!-- navbar-collapse.// -->
+ </div> <!-- container-fluid.// -->
+</nav>
+<!-- ============= COMPONENT END// ============== -->
+
+<div class="vx">
+<p>
+
+  <i style="color: red">Suggestion</i>:
+Choose the course that interests you the most. Have the courage to do what interests you and make your dreams come true.
+</p>
+
+</div>
+<div class="text">
+  <h2>Information technology</h2>
+  <p class="tt">
+    Computer information technology (CIT) is
+     the use and study of computers, networks,
+      computer languages, and databases within an 
+      organization to solve real problems. The major 
+      prepares students for applications programming, networking, systems administration, and internet development. Technologies studied in information systems include programming, networking, server administration, information security, database design and development, systems analysis and designing, and web development.
+
+
+     
+     </a>
+<br>
+<b>What includes information techanology?</b><br>
+An information technology system (IT system) is generally an information system, a communications system, or, more specifically speaking, a computer system — including all hardware, software, and peripheral equipment — operated by a limited group of IT users.
+
+  </p>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+  <table style="width:100%">
+    <tr>
+      <th>Computer Software</th>
+      <th>Computer Techanology</th> 
+     
+    </tr>
+    <tr>
+      <td>Computer Graphics</td>
+      <td>Paratical A Plus</td>
+     
+    </tr>
+    <tr>
+      <td>Computer Software and Media Applications, Other</td>
+      <td>Networking</td>
+     
+    </tr>
+    <tr>
+      <td>Data Modeling/Warehousing and Database Administration</td>
+      <td>Cybersecurity</td>
+    
+    </tr>
+    <tr>
+      <td>Modeling, Virtual Environments and Simulation</td>
+      <td>Hardware Support</td>
+    
+    </tr>
+    <tr>
+      <td>Web Page, Digital/Multimedia & Information Resources Design</td>
+      <td>Software Installation & Maintenance</td>
+    
+    </tr>
+  </table>
+</div>
+<div class="col">
+  <table style="width:100%">
+    <tr>
+      <th>Online Coursee</th>
+      <th>Youtube Channel</th> 
+     
+    </tr>
+    <tr>
+      <td><a  href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x?source=aw&awc=6798_1652069673_19af7ea4c9407e3d15bfb28da4d42944&utm_source=aw&utm_medium=affiliate_partner&utm_content=text-link&utm_term=787739_Best+Choice+Media" class="tr">
+        Harvard University</a></td>
+      <td><a href="https://www.youtube.com/c/phpstepbystep" class="tr">Code Step By Step</a></td>
+     
+    </tr>
+    <tr>
+      <td><a class="tr" href="https://ocw.mit.edu/courses/6-00sc-introduction-to-computer-science-and-programming-spring-2011/">MIT</a></td>
+      <td><a href="https://www.youtube.com/c/SimplilearnOfficial" class="tr">SimpleLearn</a></td>
+     
+    </tr>
+    <tr>
+      <td><a  class="tr" href="https://www.edx.org/course/computer-science-101?source=aw&awc=6798_1652069928_2d8bdf44620a2f1c5fe2d68ac7f4b357&utm_source=aw&utm_medium=affiliate_partner&utm_content=text-link&utm_term=787739_Best+Choice+Media">Standford University</a></td>
+      <td><a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" class="tr">freeCodeCamp.org</a></td>
+    
+    </tr>
+    <tr>
+      <td><a class="tr" href="https://www.udacity.com/course/intro-to-theoretical-computer-science--cs313?irclickid=wt%3AXAiQ9SxyIWIkzgWUO2z7RUkGS%3Ar37m05P2Q0&irgwc=1&utm_source=affiliate&utm_medium=&aff=2558440&utm_term=&utm_campaign=__&utm_content=&adid=786224">Udacity</a></td>
+      <td><a href="freeCodeCamp.ohttps://www.youtube.com/channel/UCK4ji45I-zxeWXAFKmu3p6Qrg" class="tr"></a>Networking</td>
+    
+    </tr>
+    <tr>
+      <td><a href="https://www.coursera.org/" class="tr">Coursera</a></td>
+      <td><a href="https://www.youtube.com/watch?v=I2wURDqiXdM" class="tr">howCode</a></td>
+    
+    </tr>
+  </table>
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+<div class="text">
+  <h2>Business Management</h2>
+  <p class="tt">
+    Business management is delegation, assign the best qualified people to each position and trust your staff to do the work instead of trying to do everything yourself. It includes all aspects of overseeing and supervising business operations. Management is the act of allocating resources to accomplish desired goals and objectives efficiently and effectively; it comprises planning, organizing, staffing, leading or directing, and controlling an organization (a group of one or more people or entities) or effort for the purpose of accomplishing a goal.
+
+     
+     </a>
+<br>
+<b>What includes Business Management?</b><br>
+includes the production of materials, money, and machines, and involves both innovation and marketing.
+  </p>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+  <table style="width:70%">
+    <tr>
+      <th>Online Course</th>
+      <th>Youtube Channel</th>
+    
+    </tr>
+    <tr>
+      <td><a href="https://online.hbs.edu/courses/management-essentials/?c1=GAW_SE_NW&source=INTL_BBM&cr2=search__-__nw__-__international__-__becoming_a_better_manager&kw=_PLUS_best__PLUS_management__PLUS_courses__PLUS_online&cr5=457782659440&cr7=c&hsa_cam=1396947317&hsa_grp=56804135884&hsa_mt=b&hsa_src=g&hsa_ad=457782659440&hsa_acc={792-723-8641}&hsa_net=adwords&hsa_kw=%2Bbest%20%2Bmanagement%20%2Bcourses%20%2Bonline&hsa_tgt=kwd-350356551976&hsa_ver=3&gclid=Cj0KCQjw1N2TBhCOARIsAGVHQc7m0DsOHF6Tj6nrs_ctplSXVS-_CW1cCwytLBznAhgq9iz5e8xQvrkaAndxEALw_wcB" class="tr">Harvard Business School</a></td>
+      <td><a href="https://www.youtube.com/watch?v=TL0K0AhI7kE" class="tr">
+        HHL Leipzig Graduate School of Management</a></td>
+     
+    </tr>
+    <tr>
+      <td><a class="tr" href="https://www.edx.org/course/business-strategy-from-wharton-competitive-advan-2?source=aw&awc=6798_1652073832_06cc5206e04e4c98d9c3e68739a0765f&utm_source=aw&utm_medium=affiliate_partner&utm_content=text-link&utm_term=713679_Dotdash" class="tr">Business Strategy from Wharton: Competitive Advantage</A></td>
+
+      <td><a href="https://www.youtube.com/watch?v=uTsAHZz5Tnw" class="tr">Marketing Managment</a></td>
+     
+    </tr>
+    <tr>
+      <td><a href="https://www.edx.org/course/fundamentals-of-digital-marketing?source=aw&awc=6798_1652073977_3814315903bf6cc2f7e0e39148a8a655&utm_source=aw&utm_medium=affiliate_partner&utm_content=text-link&utm_term=713679_Dotdash" class="tr">Edx</a></td>
+      <td><a class="tr" href="https://www.youtube.com/watch?v=HE9JioDuXkQ">
+        Young Entrepreneurs Forum</a></td>
+    
+    </tr>
+    <tr>
+      <td><a href="https://ocw.mit.edu/courses/15-501-introduction-to-financial-and-managerial-accounting-spring-2004/" class="tr">MIT open CourseWare</a></td>
+      <td><a href="https://www.youtube.com/watch?v=JPq7gPkvLjI" class="tr">wansea University School of Management</a></td>
+    
+    </tr>
+  
+  </table>
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+<div class="text">
+  <h2>Foreign Language</h2>
+  <p class="tt">
+    Foreign language study enhances one’s opportunities in government, business, medicine, law, technology, military, industry, marketing, etc. Analytical skills improve when students study a foreign language.
+
+     
+     </a>
+<br>
+
+  </p>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+  <table style="width:70%">
+    <tr>
+      <th>Online Course</th>
+      <th>Youtube Channel</th>
+    
+    </tr>
+    <tr>
+      <td><a href="https://www.udemy.com/topic/learning-a-foreign-language/?utm_source=adwords&utm_medium=udemyads&utm_campaign=DSA_Catchall_la.EN_cc.ROW&utm_content=deal4584&utm_term=_._ag_88010211481_._ad_535397282064_._kw__._de_c_._dm__._pl__._ti_dsa-392130681248_._li_9065339_._pd__._&matchtype=&gclid=Cj0KCQjw1N2TBhCOARIsAGVHQc6XoHpx_G4cmSaYFmlAS9CnJvOIN0Jh9to6LdEVxtW9T7APgKWu8ccaAilmEALw_wcB" class="tr">Udemy</a></td>
+      <td><a href="https://www.youtube.com/watch?v=QOpQf3fi2N4" class="tr">
+    Learn Chinese Language</a></td>
+     
+    </tr>
+    <tr>
+      <td><a class="tr" href="https://www.coursera.org/browse/language-learning" class="tr">Coursera</a></td>
+
+      <td><a href="https://www.youtube.com/watch?v=m1-Bx3h4cio" class="tr">
+        English Conversation</a></td>
+     
+    </tr>
+    <tr>
+      <td><a href="https://www.rocketlanguages.com/spanish/premium/?ref=cj&publisher=100178319&cjevent=3fba8f55cf6111ec821302510a18050d" class="tr">Rocket Languages</a></td>
+      <td><a class="tr" href="https://www.youtube.com/watch?v=8YV8KmfBbBM">
+       Learn Japanese</a></td>
+    
+    </tr>
+    <tr>
+      <td><a href="https://www.skillshare.com/browse/languages?clickid=WWj1CZT4kxyIWIkzgWUO2z7RUkGS7226m05ozQ0&irgwc=1&utm_content=4650&utm_term=Mark%20Ways&utm_campaign=1912462&affiliateRef=6595003&utm_medium=affiliate-referral&utm_source=IR" class="tr">Skill Share</a></td>
+      <td><a href="https://www.youtube.com/watch?v=0t3ch-UAbo0" class="tr">
+        seemile Korean</a></td>
+    
+    </tr>
+  
+  </table>
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+<div id="contact">
+  <div class="contact fx">
+   
+    <div class="row1">
+      <div class="column1">
+       
+       <img src="p.png" class="pn">&nbsp;09-1234567
+      </div>
+      
+      <div class="column1">
+       <img src="icons8-facebook-32.png" class="pn">&nbsp;<a href="www.facebook.com">Online EDU</a>
+      </div>
+      
+      <div class="column1">
+        <img src="icons8-gmail-32.png" class="pn">&nbsp;chuc5824@gmail.com
+      </div>
+      
+      <div class="column1">
+       <img src="icons8-website-30.png" class="pn">&nbsp;<a href="www.google.com">Online Courses</a>
+      </div>
+    </div>
+  </div></div>
+</body>
+</html>
